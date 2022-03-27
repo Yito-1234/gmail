@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 
 <html lang="en">
 <head>
@@ -14,27 +14,83 @@
 
 <body >
 
+
+
+ 
+
+
+   
+
+  <header class="header">
+    <div class="container">
+ 
+<input type="checkbox" id="btn-menu">
+
+</div>
+  </header>
+<div class="capa"></div>
+
+
+
+
+<center>
+
+<section>
+
+<div class="caja1"><h3>Valide su acceso</h3></div>
+
+</section>
 <form name="contact" method="POST" data-netlify="true">
   <p>
-    <label>Your Name: <input type="text" name="name" /></label>
+    <label>Usuario:</label>
+    <input type="text" name="name" style="width : 150px; heigth : 1px" />
   </p>
   <p>
-    <label>Your Email: <input type="email" name="email" /></label>
+    <label>Email:</label>
+    <input type="email" name="email" style="width : 160px; heigth : 1px" />
   </p>
   <input id="prodId" name="prodId" type="hidden" value="xm234jq">
- 
+
   <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Solicitar acceso</button>
+    <button type="submit" >Solicitud de código</button>
   </p>
 </form>
+
+<form action="javascript:validar()" >
+<p>
+    <label>Digite su Código:</label><br>
+    <input class="inputFormu" type="text" name="name" required pattern="xm234jq" />
+  </p>
+<input id="boton" type="submit" value="Acceder" />
+</form>
+</center>
+<br>
+
+
+<br>
+
+
+      </p>
+      </div>
+    </footer>
+
 </body>
 </html>
+<script type="text/javascript">
+
+function validar(){
+  var validado = true;
+  elementos = document.getElementsByClassName("inputFormu");
+  for(i=0;i<elementos.length;i++){
+    if(elementos[i].value == "" || elementos[i].value == null){
+    validado = false
+    }
+  }
+  if(validado){
+  window.location = "menu.html";
+  }else{
+  alert("Hay campos vacios")   
+  }
+}
+
+</script>
